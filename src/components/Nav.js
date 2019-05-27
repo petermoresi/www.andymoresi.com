@@ -2,31 +2,35 @@ import React from 'react'
 import Scrollspy from 'react-scrollspy'
 import Scroll from './Scroll'
 
-const Nav = (props) => (
-    <nav id="nav" className={props.sticky ? 'alt' : ''}>
-        <Scrollspy items={ ['intro', 'first', 'second', 'cta'] } currentClassName="is-active" offset={-300}>
-            <li>
-                <Scroll type="id" element="intro">
-                    <a href="#">About</a>
-                </Scroll>
-            </li>
-            <li>
-                <Scroll type="id" element="first">
-                    <a href="#">Did this</a>
-                </Scroll>
-            </li>
-            <li>
-                <Scroll type="id" element="second">
-                    <a href="#">Done that</a>
-                </Scroll>
-            </li>
-            {/* <li>
+const Nav = props => (
+  <nav id="nav" className={props.sticky ? 'alt' : ''}>
+    <Scrollspy
+      items={['intro', 'first', 'second', 'cta']}
+      currentClassName="is-active"
+      offset={-300}
+    >
+      <li>
+        <Scroll type="id" element="intro">
+          <a href="#about">basics</a>
+        </Scroll>
+      </li>
+      <li>
+        <Scroll type="id" element="first">
+          <a href="#did-this">did this</a>
+        </Scroll>
+      </li>
+      <li>
+        <Scroll type="id" element="second">
+          <a href="#done-tat">done that</a>
+        </Scroll>
+      </li>
+      {/* <li>
                 <Scroll type="id" element="cta">
                     <a href="#">Shop</a>
                 </Scroll>
             </li> */}
-        </Scrollspy>
-    </nav>
+    </Scrollspy>
+  </nav>
 )
 
 export default Nav

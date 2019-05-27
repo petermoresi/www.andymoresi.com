@@ -7,26 +7,25 @@ import Layout from '../components/layout'
 import Header from '../components/Header'
 import Nav from '../components/Nav'
 import pic01 from '../assets/images/0.jpeg'
-import windyLogo from "../assets/images/w-logo-large.png"
+import windyLogo from '../assets/images/w-logo-large.png'
 
 class Index extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      stickyNav: false
+      stickyNav: false,
     }
   }
 
-  _handleWaypointEnter= () => {
-    this.setState(() => ({ stickyNav: false }));
+  _handleWaypointEnter = () => {
+    this.setState(() => ({ stickyNav: false }))
   }
 
   _handleWaypointLeave = () => {
-    this.setState(() => ({ stickyNav: true }));
+    this.setState(() => ({ stickyNav: true }))
   }
 
   render() {
-
     return (
       <Layout>
         <Helmet title="Andy Moresi - Musician in Los Angeles, CA" />
@@ -36,55 +35,102 @@ class Index extends React.Component {
         <Waypoint
           onEnter={this._handleWaypointEnter}
           onLeave={this._handleWaypointLeave}
-        >
-        </Waypoint>
+        />
         <Nav sticky={this.state.stickyNav} />
 
         <div id="main">
-
           <section id="intro" className="main">
             <div className="spotlight">
               <div className="content">
                 <header className="major">
                   <h2>Making music and more</h2>
                 </header>
-                <p>I have been playing music my whole life. I began songwriting at a very young age, almost quite by accident. Before I knew it, piano lessons and singing in school and church choirs occupied much of my time. Over the years I have had the privilege to study, rehearse and perform in many different musical environments with the most amazing musicians on earth.</p>
                 <p>
-                  My studio recording experience began at 16 with my first trio (debut on guitar). My first road gig, at 17, in New Orleans as guitarist for The Lutheran Church Missouri Synod's national youth gathering jazz band, performing for over 32 thousand attendees. As a freelance musician. I enjoy working on concerts and projects with all sorts of singers and songwriters. I also perform regularly in musical theatre orchestras and have composed for film and television.
+                  I have been playing music my whole life. I began songwriting
+                  at a very young age, almost quite by accident. Before I knew
+                  it, piano lessons and singing in school and church choirs
+                  occupied much of my time. Over the years I have had the
+                  privilege to study, rehearse and perform in many different
+                  musical environments with the most amazing musicians on earth.
                 </p>
                 <p>
-                  I am a member of The American Federation of Musicians (AFM) Local 47 chapter. Thanks to my family and friends that help, support and guide my path in life, heath and career...my work is dedicated to all of the wonderful musicians and teachers that gave me so much inspiration.
+                  My studio recording experience began at 16 with my first trio
+                  (debut on guitar). My first road gig, at 17, in New Orleans as
+                  guitarist for The Lutheran Church Missouri Synod's national
+                  youth gathering jazz band, performing for over 32 thousand
+                  attendees. As a freelance musician. I enjoy working on
+                  concerts and projects with all sorts of singers and
+                  songwriters. I also perform regularly in musical theatre
+                  orchestras and have composed for film and television.
+                </p>
+                <p>
+                  I am a member of The American Federation of Musicians (AFM)
+                  Local 47 chapter. Thanks to my family and friends that help,
+                  support and guide my path in life, heath and career...my work
+                  is dedicated to all of the wonderful musicians and teachers
+                  that gave me so much inspiration.
                 </p>
                 {/* <ul className="actions">
                   <li><Link to="/generic" className="button">Learn More</Link></li>
                 </ul> */}
               </div>
-              <span className="image"><img src={pic01} alt="" /></span>
+              <span className="image">
+                <img src={pic01} alt="" />
+              </span>
             </div>
           </section>
 
           <section id="first" className="main special">
-            <header className="major">
-              <h2>Discography</h2>
-            </header>
             <ul className="features">
               <li>
                 <span className="icon major style1">
-                  <a href="http://windyhillstudioaustin.com/" style={{ borderBottom: 'none'}}><img src={windyLogo} style={{ border: '1px solid #CCC', borderRadius: 110, maxWidth: 220, minHeight: 220 }} /></a>
+                  <a
+                    href="http://windyhillstudioaustin.com/"
+                    style={{ borderBottom: 'none' }}
+                  >
+                    <img
+                      src={windyLogo}
+                      style={{
+                        border: '1px solid #CCC',
+                        borderRadius: 110,
+                        maxWidth: 220,
+                        minHeight: 220,
+                      }}
+                    />
+                  </a>
                 </span>
                 <h3>Windy Hill Studio Austin</h3>
-                <p>Producer and session credits: 
-                <br></br>Slow Cooked, Cole McCabe, and Mathias Clark.</p>
+                <p>
+                  <b>Producer credits:</b>
+                  <br /> Cole McCabe, Shake &amp; Bake
+                  <br />
+                  <b>Session credits:</b>
+                  <br /> Slow Cooked, Shake &amp; Bake,
+                  <br /> Jazz Assassins.
+                </p>
               </li>
               <li>
-                <span className="icon major style3 fa-music"></span>
+                <span className="icon major style3 fa-music" />
                 <h3>Greater Los Angeles</h3>
-                <p>Being my home, I work here most of the time and have had the privaledge to work with and record with many of the most amazing artists on earth! <br/>Jabudah <br/>Annabella Lwin/Bow Wow Wow <br></br>Kevin Hiatt Big Band.</p>
+                <p>
+                  Being my home, I work here most of the time and have had the
+                  privaledge to work with and record with many of the most
+                  amazing artists on earth! <br />
+                  Jabudah <br />
+                  Annabella Lwin/Bow Wow Wow <br />
+                  Kevin Hiatt Big Band.
+                </p>
               </li>
               <li>
-                <span className="icon major style5 fa-coffee"></span>
+                <span className="icon major style5 fa-coffee" />
                 <h3>American Mutt Studio</h3>
-                <p>Open since 2007, we have produced recording for everything from full audio replacement in a docu-short and demos for songwriters to sound reels for voiceover artists. On occasion, I even sometimes pen an original tune out myself in this terrific room!</p>
+                <p>
+                  Open since 2007, we have produced recording for everything
+                  from full audio replacement in a docu-short and demos for
+                  songwriters to sound reels for voiceover artists. On occasion,
+                  I even sometimes pen an original tune out myself in this
+                  terrific room!
+                </p>
               </li>
             </ul>
             {/* <footer className="major">
@@ -96,73 +142,58 @@ class Index extends React.Component {
 
           <section id="second" className="main special">
             <header className="major">
-              <h2>Live Tours &amp; Theatre Credits</h2>
+              <h2>Some Credits...</h2>
             </header>
             <h3>2019</h3>
             <ul className="features">
               <li>
-                Legally Blonde
+                <a href="/dear-jerry-seinfeld">Dear, Jerry Seinfeld</a>
               </li>
               <li>
-                We Will Rock You
+                <a href="/school-of-rock">School of Rock</a>
               </li>
               <li>
-                9 to 5
+                <a href="/legally-blonde">Legally Blonde</a>
+              </li>
+              <li>
+                <a href="/matilda">Matilda</a>
+              </li>
+              <li>
+                <a href="/we-will-rock-you">We Will Rock You</a>
+              </li>
+              <li>
+                <a href="/9-to-5">9 to 5</a>
               </li>
             </ul>
             <h3>2018</h3>
             <ul className="features">
-              <li>
-                West Side Story 
-              </li>
-              <li>
-                Oklahoma
-              </li>
-              <li>
-                Thoroughly Modern Millie 
-              </li>
-              <li>
-                Sister Act
-              </li>
+              <li>West Side Story</li>
+              <li>Oklahoma</li>
+              <li>Thoroughly Modern Millie</li>
+              <li>Sister Act</li>
             </ul>
             <h3>2017</h3>
             <ul className="features">
               <li>
-                Guitarist for Bow Wow Wow (US national tour with The Romantics, The Smithereens, The Motels)
+                Guitarist for Bow Wow Wow (US national tour with The Romantics,
+                The Smithereens, The Motels)
               </li>
               <li>
-                Ventura County Fair - Performed at Firestone 805 garden with Blue Latitude
+                Ventura County Fair - Performed at Firestone 805 garden with
+                Blue Latitude
               </li>
-              <li>
-                Hair
-              </li>
-              <li>
-                Bring It On
-              </li>
-              <li>
-                Big Fish
-              </li>
-              <li>
-                The Wannabe (SAG Television Pilot)
-              </li>
-              <li>
-                Bat boy
-              </li>
+              <li>Hair</li>
+              <li>Bring It On</li>
+              <li>Big Fish</li>
+              <li>The Wannabe (SAG Television Pilot)</li>
+              <li>Bat boy</li>
             </ul>
             <h3>2016</h3>
             <ul className="features">
-              <li>
-                In The Heights
-              </li>
-              <li>
-                Skullduggery
-              </li>
-              <li>
-                Hairspray
-              </li>
-              <li>
-              Late Bloomers (SAG Television Pilot)
-              </li>
+              <li>In The Heights</li>
+              <li>Skullduggery</li>
+              <li>Hairspray</li>
+              <li>Late Bloomers (SAG Television Pilot)</li>
             </ul>
             {/* <ul className="statistics">
               <li className="style1">
@@ -207,9 +238,7 @@ class Index extends React.Component {
               </ul>
             </footer>
           </section> */}
-
         </div>
-
       </Layout>
     )
   }
